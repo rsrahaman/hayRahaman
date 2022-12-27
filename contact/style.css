@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+:root {
+  --header__bgc: #151c2b;
+  --bgc: #151c2b;
+  --btn: #ffaa17;
+  --heading: #ffaa17;
+  --para: #ffe49d;
+  --btn__hover: #1e2739;
+}
+/* ======== =======header-section ================*/
+header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #1e2739;
+}
+.header__logo__Img {
+  width: 300px;
+  cursor: pointer;
+}
+header ul {
+  display: flex;
+  align-items: center;
+}
+header ul li {
+  padding: 1rem;
+}
+header ul li a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f2924c;
+  padding: 10px;
+}
+header ul li a:hover {
+  background-color: #1e2739;
+  transition: 0.5s;
+}
+.checkbtn {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+/* =====================header-end======== */
+/* ================header-end========= */
+/* ===============form-start======== */
+.center {
+  text-align: center;
+  font-size: 30px;
+  padding: 70px 0;
+  color: #fff;
+  background-color: #151c2b;
+}
+.form-section-bottom {
+  display: flex;
+  justify-content: space-around;
+  background-color: #151c2b;
+  padding-bottom: 50px;
+}
+.name,
+.email,
+.subject,
+.submit,
+.message {
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  background-color: #1e2739;
+}
+.submit {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #ffaa17;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: #1e2739;
+  transition: 0.5s;
+}
+.name:focus,
+.email:focus,
+.subject:focus,
+.submit:focus,
+.message:focus {
+  outline: 1px solid #ffaa17;
+}
+.address {
+  color: #fff;
+  background-color: #1e2739;
+  padding: 0px 50px 50px 50px;
+}
+.address i {
+  font-size: 20px;
+  line-height: 50px;
+  color: #f2924c;
+}
+.address h3 {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  display: inline;
+  margin-left: 5px;
+}
+.address__tex {
+  border-bottom: 1px solid #a0a0a0;
+  padding: 20px;
+}
+/* ========================form-end======== */
+/* =====================footer-start======== */
+footer {
+  font-size: 20px;
+  line-height: 35px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 50px;
+  background-color: #1e2739;
+}
+
+footer h3 {
+  color: #fff;
+}
+footer a {
+  margin-bottom: 50px;
+  color: #f2924c;
+  transition: 0.5s;
+}
+.footer-logo {
+  margin-bottom: 33px;
+  width: 200px;
+}
+.footer-logo-section {
+  width: 300px;
+}
+.footer-logo-section span {
+  color: #fff;
+}
+.fa-brands {
+  font-size: 30px;
+  color: #f2924c;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.fa-brands:hover,
+footer a:hover {
+  color: #ffe4a9;
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+/* ========================footer-end======== */
+@media only screen and (max-width: 600px) {
+  /* -----------header -----------*/
+  .checkbtn {
+    display: block;
+  }
+  header ul {
+    position: fixed;
+    display: inline;
+    width: 100%;
+    height: 100vh;
+    top: 70px;
+    left: -100%;
+    background-color: #151c2b;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  header ul li {
+    display: block;
+    margin: 0;
+    line-height: 30px;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  #check:checked ~ .checkbtn i::before {
+    content: "\f00d";
+  }
+  .header__logo__Img {
+    width: 200px;
+    margin-left: -20px;
+  }
+  header ul li a {
+    background-color: #151c2b;
+  }
+  header ul li a:hover {
+    color: #f2924c;
+  }
+  /* ------ ---form-section----------- */
+  /* form-sectin */
+  .center {
+    font-size: 25px;
+  }
+  .form-section-bottom {
+    display: block;
+    margin: 0rem;
+  }
+  .name,
+  .email,
+  .subject,
+  .submit,
+  .message,
+  .address {
+    width: 80%;
+    margin-left: 40px;
+  }
+  .address {
+    margin-top: 50px;
+  }
+  /* ------ ---footer----------- */
+  footer {
+    display: block;
+    padding: 10;
+  }
+  footer h3 {
+    margin: 0;
+    margin-top: 30px;
+  }
+  footer a img {
+    width: 180px;
+    border-radius: 10px;
+  }
+}
